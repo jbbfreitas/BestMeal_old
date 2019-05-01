@@ -123,7 +123,7 @@ ength
 
 ### Abra o modelo de classes para as entidades : 
 
-[Modelo de Classes]: https://github.com/jbbfreitas/BestMeal/blob/master/Calsses%20do%20restaurante.jpg 
+[Modelo de Classes] (https://github.com/jbbfreitas/BestMeal/blob/master/Calsses%20do%20restaurante.jpg) 
 
 ### Usando o jhipster, crie as seguintes entidades : 
 
