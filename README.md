@@ -119,6 +119,9 @@ ength
 8. ? Do you want to add a relationship to another entity? No
 
 ```
+### Execute a aplicação e teste o CRUD do `CartaoCredito`
+
+
 ### Faça o mesmo para as entidades : 
 
 ```
