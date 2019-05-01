@@ -35,9 +35,9 @@ spring:
         serialization.indent_output: true
     datasource:
         type: com.zaxxer.hikari.HikariDataSource
-        url: jdbc:postgresql://localhost:5432/BestMeal
-        username: BestMeal
-        password:
+        url: jdbc:postgresql://localhost:5432/bestmeal
+        username: bestmeal
+        password: bestmeal
         hikari:
             auto-commit: false
     jpa:
@@ -64,7 +64,7 @@ spring:
         cache: false
 
 server:
-    port: 8080
+    port: 8090
 
 # ===================================================================
 # JHipster specific properties

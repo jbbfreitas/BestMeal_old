@@ -191,4 +191,5 @@ public class WebConfigurer implements ServletContextInitializer, WebServerFactor
     public void setMetricRegistry(MetricRegistry metricRegistry) {
         this.metricRegistry = metricRegistry;
     }
+  
 }
