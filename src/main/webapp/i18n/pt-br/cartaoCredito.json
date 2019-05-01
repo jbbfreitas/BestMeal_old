@@ -1,0 +1,25 @@
+
+{
+    "bestMealApp": {
+        "cartaoCredito" : {
+            "home": {
+                "title": "Cartão de Crédito",
+                "createLabel": "Novo",
+                "createOrEditLabel": "Criar ou editar Cartao Credito"
+            },
+            "created": "Um novo Cartao Credito foi criado com o identificador {{ param }}",
+            "updated": "Um Cartao Credito foi atualizado com o identificador {{ param }}",
+            "deleted": "Um Cartao Credito foi deletado com o identificador {{ param }}",
+            "delete": {
+                "question": "Tem certeza de que deseja excluir Cartao Credito {{ id }}?"
+            },
+            "detail": {
+                "title": "Cartão de Crédito"
+            },
+            "bandeira": "Bandeira",
+            "numero": "Numero",
+            "cv": "Cv",
+            "validade": "Validade"
+        }
+    }
+}
