@@ -121,8 +121,11 @@ ength
 ```
 ### Execute a aplicação e teste o CRUD do `CartaoCredito`
 
+### Abra o modelo de classes para as entidades : 
 
-### Faça o mesmo para as entidades : 
+[Modelo de Classes]: https://github.com/jbbfreitas/BestMeal/blob/master/Calsses%20do%20restaurante.jpg 
+
+### Usando o jhipster, crie as seguintes entidades : 
 
 ```
 CartaoRecompensa
