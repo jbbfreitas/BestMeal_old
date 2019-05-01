@@ -119,6 +119,15 @@ ength
 8. ? Do you want to add a relationship to another entity? No
 
 ```
+### Faça o mesmo para as entidades : 
+
+```
+CartaoRecompensa
+Menu
+Produto
+Nome
+Logradouro e Município
+````
 
 
 
