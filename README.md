@@ -8,9 +8,9 @@ Esta aplicação faz reservas em restaurantes.
 
 2. Nessa pasta, execute o tutorial do Jhipster conforme https://github.com/jbbfreitas/jhipster , lembre-se de alterar o nome da aplicação para `BestMeal` e o pacote base para `br.com.abim.bestmeal`
 
-3. No `pgadmin` crie um `user/role` denominado `bestmeal` e senha `bestmeal`
+3. No pgadmin crie um usuário denominado `bestmeal` e senha `bestmeal`
 
-4. No `pgadmin` crie um `database` denominado `bestmeal` com owner `bestmeal`
+4. No pgadmin crie um database denominado `bestmeal` com owner `bestmeal`
 
 5. Importe o projeto no Eclipse
 
@@ -59,7 +59,10 @@ mvn
             headers: { host: 'localhost:9000' }
         }],
 ````
-]
+
+
+
+
 2. Execute os seguintes comandos em dois terminais separados para criar uma experiência melhor de desenvolvimento  onde seu navegador
 atualiza automaticamente quando os arquivos são alterados no disco rígido.
 
