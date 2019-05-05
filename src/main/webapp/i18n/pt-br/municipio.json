@@ -1,23 +1,23 @@
 
 {
     "bestMealApp": {
-        "municipio" : {
+        "Município" : {
             "home": {
-                "title": "Municipios",
-                "createLabel": "Criar novo Municipio",
-                "createOrEditLabel": "Criar ou editar Municipio"
+                "title": "Municípios",
+                "createLabel": "Criar novo Município",
+                "createOrEditLabel": "Criar ou editar Município"
             },
-            "created": "Um novo Municipio foi criado com o identificador {{ param }}",
-            "updated": "Um Municipio foi atualizado com o identificador {{ param }}",
-            "deleted": "Um Municipio foi deletado com o identificador {{ param }}",
+            "created": "Um novo Município foi criado com o identificador {{ param }}",
+            "updated": "Um Município foi atualizado com o identificador {{ param }}",
+            "deleted": "Um Município foi deletado com o identificador {{ param }}",
             "delete": {
-                "question": "Tem certeza de que deseja excluir Municipio {{ id }}?"
+                "question": "Tem certeza de que deseja excluir Município {{ id }}?"
             },
             "detail": {
-                "title": "Municipio"
+                "title": "Município"
             },
-            "nome": "Nome",
-            "uf": "Uf"
+            "nome": "Nome do Município",
+            "uf": "UF"
         }
     }
 }
