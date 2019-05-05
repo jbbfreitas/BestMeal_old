@@ -16,8 +16,8 @@
             <tr jhiSort [(predicate)]="predicate" [(ascending)]="reverse" [callback]="transition.bind(this)">
             <th jhiSortBy="id"><span jhiTranslate="global.field.id">ID</span> <fa-icon [icon]="'sort'"></fa-icon></th>
             <th jhiSortBy="cep"><span jhiTranslate="bestMealApp.endereco.cep">Cep</span> <fa-icon [icon]="'sort'"></fa-icon></th>
-            <th jhiSortBy="complemento"><span jhiTranslate="bestMealApp.endereco.complemento">Complemento</span> <fa-icon [icon]="'sort'"></fa-icon></th>
             <th jhiSortBy="logradouro.nome"><span jhiTranslate="bestMealApp.endereco.logradouro">Logradouro</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="complemento"><span jhiTranslate="bestMealApp.endereco.complemento">Complemento</span> <fa-icon [icon]="'sort'"></fa-icon></th>
             <th jhiSortBy="municipio.nome"><span jhiTranslate="bestMealApp.endereco.municipio">Municipio</span> <fa-icon [icon]="'sort'"></fa-icon></th>
             <th></th>
             </tr>
@@ -26,12 +26,12 @@
             <tr *ngFor="let endereco of enderecos ;trackBy: trackId">
                 <td><a [routerLink]="['/endereco', endereco.id, 'view' ]">{{endereco.id}}</a></td>
                 <td>{{endereco.cep}}</td>
-                <td>{{endereco.complemento}}</td>
                 <td>
                     <div *ngIf="endereco.logradouro">
                         <a [routerLink]="['../logradouro', endereco.logradouro?.id, 'view' ]" >{{endereco.logradouro?.nome}}</a>
                     </div>
                 </td>
+                <td>{{endereco.complemento}}</td>
                 <td>
                     <div *ngIf="endereco.municipio">
                         <a [routerLink]="['../municipio', endereco.municipio?.id, 'view' ]" >{{endereco.municipio?.nome}}</a>
