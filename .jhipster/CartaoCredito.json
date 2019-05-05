@@ -13,22 +13,24 @@
             "fieldType": "String"
         },
         {
-            "fieldName": "cv",
-            "fieldType": "String"
+            "fieldName": "cvv",
+            "fieldType": "String",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "pattern"
+            ],
+            "fieldValidateRulesPattern": "^[0-9]{3}$"
         },
         {
             "fieldName": "validade",
             "fieldType": "String",
             "fieldValidateRules": [
-                "required",
-                "minlength",
-                "maxlength"
+                "pattern"
             ],
-            "fieldValidateRulesMinlength": "4",
-            "fieldValidateRulesMaxlength": "4"
+            "fieldValidateRulesPattern": "^[0-9]{2}/[0-9]{4}$"
         }
     ],
-    "changelogDate": "20190501153801",
+    "changelogDate": "20190505153801",
     "dto": "no",
     "searchEngine": false,
     "service": "serviceImpl",

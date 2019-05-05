@@ -47,11 +47,11 @@ public class CartaoCreditoResourceIntTest {
     private static final String DEFAULT_NUMERO = "AAAAAAAAAA";
     private static final String UPDATED_NUMERO = "BBBBBBBBBB";
 
-    private static final String DEFAULT_CV = "AAAAAAAAAA";
-    private static final String UPDATED_CV = "BBBBBBBBBB";
+    private static final String DEFAULT_CVV = "291";
+    private static final String UPDATED_CVV = "285";
 
-    private static final String DEFAULT_VALIDADE = "AAAA";
-    private static final String UPDATED_VALIDADE = "BBBB";
+    private static final String DEFAULT_VALIDADE = "00/7107";
+    private static final String UPDATED_VALIDADE = "63/5699";
 
     @Autowired
     private CartaoCreditoRepository cartaoCreditoRepository;
@@ -96,7 +96,7 @@ public class CartaoCreditoResourceIntTest {
         CartaoCredito cartaoCredito = new CartaoCredito()
             .bandeira(DEFAULT_BANDEIRA)
             .numero(DEFAULT_NUMERO)
-            .cv(DEFAULT_CV)
+            .cvv(DEFAULT_CVV)
             .validade(DEFAULT_VALIDADE);
         return cartaoCredito;
     }
@@ -123,7 +123,7 @@ public class CartaoCreditoResourceIntTest {
         CartaoCredito testCartaoCredito = cartaoCreditoList.get(cartaoCreditoList.size() - 1);
         assertThat(testCartaoCredito.getBandeira()).isEqualTo(DEFAULT_BANDEIRA);
         assertThat(testCartaoCredito.getNumero()).isEqualTo(DEFAULT_NUMERO);
-        assertThat(testCartaoCredito.getCv()).isEqualTo(DEFAULT_CV);
+        assertThat(testCartaoCredito.getCvv()).isEqualTo(DEFAULT_CVV);
         assertThat(testCartaoCredito.getValidade()).isEqualTo(DEFAULT_VALIDADE);
     }
 
@@ -148,24 +148,6 @@ public class CartaoCreditoResourceIntTest {
 
     @Test
     @Transactional
-    public void checkValidadeIsRequired() throws Exception {
-        int databaseSizeBeforeTest = cartaoCreditoRepository.findAll().size();
-        // set the field null
-        cartaoCredito.setValidade(null);
-
-        // Create the CartaoCredito, which fails.
-
-        restCartaoCreditoMockMvc.perform(post("/api/cartao-creditos")
-            .contentType(TestUtil.APPLICATION_JSON_UTF8)
-            .content(TestUtil.convertObjectToJsonBytes(cartaoCredito)))
-            .andExpect(status().isBadRequest());
-
-        List<CartaoCredito> cartaoCreditoList = cartaoCreditoRepository.findAll();
-        assertThat(cartaoCreditoList).hasSize(databaseSizeBeforeTest);
-    }
-
-    @Test
-    @Transactional
     public void getAllCartaoCreditos() throws Exception {
         // Initialize the database
         cartaoCreditoRepository.saveAndFlush(cartaoCredito);
@@ -177,7 +159,7 @@ public class CartaoCreditoResourceIntTest {
             .andExpect(jsonPath("$.[*].id").value(hasItem(cartaoCredito.getId().intValue())))
             .andExpect(jsonPath("$.[*].bandeira").value(hasItem(DEFAULT_BANDEIRA.toString())))
             .andExpect(jsonPath("$.[*].numero").value(hasItem(DEFAULT_NUMERO.toString())))
-            .andExpect(jsonPath("$.[*].cv").value(hasItem(DEFAULT_CV.toString())))
+            .andExpect(jsonPath("$.[*].cvv").value(hasItem(DEFAULT_CVV.toString())))
             .andExpect(jsonPath("$.[*].validade").value(hasItem(DEFAULT_VALIDADE.toString())));
     }
     
@@ -194,7 +176,7 @@ public class CartaoCreditoResourceIntTest {
             .andExpect(jsonPath("$.id").value(cartaoCredito.getId().intValue()))
             .andExpect(jsonPath("$.bandeira").value(DEFAULT_BANDEIRA.toString()))
             .andExpect(jsonPath("$.numero").value(DEFAULT_NUMERO.toString()))
-            .andExpect(jsonPath("$.cv").value(DEFAULT_CV.toString()))
+            .andExpect(jsonPath("$.cvv").value(DEFAULT_CVV.toString()))
             .andExpect(jsonPath("$.validade").value(DEFAULT_VALIDADE.toString()));
     }
 
@@ -221,7 +203,7 @@ public class CartaoCreditoResourceIntTest {
         updatedCartaoCredito
             .bandeira(UPDATED_BANDEIRA)
             .numero(UPDATED_NUMERO)
-            .cv(UPDATED_CV)
+            .cvv(UPDATED_CVV)
             .validade(UPDATED_VALIDADE);
 
         restCartaoCreditoMockMvc.perform(put("/api/cartao-creditos")
@@ -235,7 +217,7 @@ public class CartaoCreditoResourceIntTest {
         CartaoCredito testCartaoCredito = cartaoCreditoList.get(cartaoCreditoList.size() - 1);
         assertThat(testCartaoCredito.getBandeira()).isEqualTo(UPDATED_BANDEIRA);
         assertThat(testCartaoCredito.getNumero()).isEqualTo(UPDATED_NUMERO);
-        assertThat(testCartaoCredito.getCv()).isEqualTo(UPDATED_CV);
+        assertThat(testCartaoCredito.getCvv()).isEqualTo(UPDATED_CVV);
         assertThat(testCartaoCredito.getValidade()).isEqualTo(UPDATED_VALIDADE);
     }
 

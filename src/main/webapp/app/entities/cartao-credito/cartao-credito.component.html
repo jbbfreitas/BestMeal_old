@@ -17,7 +17,7 @@
             <th jhiSortBy="id"><span jhiTranslate="global.field.id">ID</span> <fa-icon [icon]="'sort'"></fa-icon></th>
             <th jhiSortBy="bandeira"><span jhiTranslate="bestMealApp.cartaoCredito.bandeira">Bandeira</span> <fa-icon [icon]="'sort'"></fa-icon></th>
             <th jhiSortBy="numero"><span jhiTranslate="bestMealApp.cartaoCredito.numero">Numero</span> <fa-icon [icon]="'sort'"></fa-icon></th>
-            <th jhiSortBy="cv"><span jhiTranslate="bestMealApp.cartaoCredito.cv">Cv</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="cvv"><span jhiTranslate="bestMealApp.cartaoCredito.cvv">Cvv</span> <fa-icon [icon]="'sort'"></fa-icon></th>
             <th jhiSortBy="validade"><span jhiTranslate="bestMealApp.cartaoCredito.validade">Validade</span> <fa-icon [icon]="'sort'"></fa-icon></th>
             <th></th>
             </tr>
@@ -27,7 +27,7 @@
                 <td><a [routerLink]="['/cartao-credito', cartaoCredito.id, 'view' ]">{{cartaoCredito.id}}</a></td>
                 <td jhiTranslate="{{'bestMealApp.Bandeira.' + cartaoCredito.bandeira}}">{{cartaoCredito.bandeira}}</td>
                 <td>{{cartaoCredito.numero}}</td>
-                <td>{{cartaoCredito.cv}}</td>
+                <td>{{cartaoCredito.cvv}}</td>
                 <td>{{cartaoCredito.validade}}</td>
                 <td class="text-right">
                     <div class="btn-group flex-btn-group-container">

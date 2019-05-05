@@ -57,7 +57,7 @@ describe('Service Tests', () => {
                     {
                         bandeira: 'BBBBBB',
                         numero: 'BBBBBB',
-                        cv: 'BBBBBB',
+                        cvv: 'BBBBBB',
                         validade: 'BBBBBB'
                     },
                     elemDefault
@@ -77,7 +77,7 @@ describe('Service Tests', () => {
                     {
                         bandeira: 'BBBBBB',
                         numero: 'BBBBBB',
-                        cv: 'BBBBBB',
+                        cvv: 'BBBBBB',
                         validade: 'BBBBBB'
                     },
                     elemDefault

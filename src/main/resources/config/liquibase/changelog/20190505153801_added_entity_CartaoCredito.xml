@@ -16,7 +16,7 @@
     <!--
         Added the entity CartaoCredito.
     -->
-    <changeSet id="20190501153801-1" author="jhipster">
+    <changeSet id="20190505153801-1" author="jhipster">
         <createTable tableName="cartao_credito">
             <column name="id" type="bigint" autoIncrement="${autoIncrement}">
                 <constraints primaryKey="true" nullable="false"/>
@@ -29,12 +29,12 @@
                 <constraints nullable="true" />
             </column>
 
-            <column name="cv" type="varchar(255)">
+            <column name="cvv" type="varchar(255)">
                 <constraints nullable="true" />
             </column>
 
-            <column name="validade" type="varchar(4)">
-                <constraints nullable="false" />
+            <column name="validade" type="varchar(255)">
+                <constraints nullable="true" />
             </column>
 
             <!-- jhipster-needle-liquibase-add-column - JHipster will add columns here, do not remove-->
