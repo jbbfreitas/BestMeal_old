@@ -1,0 +1,25 @@
+
+{
+    "bestMealApp": {
+        "cartaoRecompensa" : {
+            "home": {
+                "title": "Cartao Recompensas",
+                "createLabel": "Create a new Cartao Recompensa",
+                "createOrEditLabel": "Create or edit a Cartao Recompensa"
+            },
+            "created": "A new Cartao Recompensa is created with identifier {{ param }}",
+            "updated": "A Cartao Recompensa is updated with identifier {{ param }}",
+            "deleted": "A Cartao Recompensa is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Cartao Recompensa {{ id }}?"
+            },
+            "detail": {
+                "title": "Cartao Recompensa"
+            },
+            "numero": "Numero",
+            "validade": "Validade",
+            "pontuacao": "Pontuacao",
+            "situacao": "Situacao"
+        }
+    }
+}
