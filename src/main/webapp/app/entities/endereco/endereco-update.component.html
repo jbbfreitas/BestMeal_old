@@ -21,6 +21,13 @@
                     </div>
                 </div>
                 <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="bestMealApp.endereco.logradouro" for="field_logradouro">Logradouro</label>
+                    <select class="form-control" id="field_logradouro" name="logradouro" [(ngModel)]="endereco.logradouro" >
+                        <option [ngValue]="null"></option>
+                        <option [ngValue]="logradouroOption.id === endereco.logradouro?.id ? endereco.logradouro : logradouroOption" *ngFor="let logradouroOption of logradouros; trackBy: trackLogradouroById">{{logradouroOption.nome}}</option>
+                    </select>
+                </div>
+                <div class="form-group">
                     <label class="form-control-label" jhiTranslate="bestMealApp.endereco.complemento" for="field_complemento">Complemento</label>
                     <input type="text" class="form-control" name="complemento" id="field_complemento"
                         [(ngModel)]="endereco.complemento" required minlength="0" maxlength="30"/>
@@ -40,13 +47,6 @@
                     </div>
                 </div>
 
-                <div class="form-group">
-                    <label class="form-control-label" jhiTranslate="bestMealApp.endereco.logradouro" for="field_logradouro">Logradouro</label>
-                    <select class="form-control" id="field_logradouro" name="logradouro" [(ngModel)]="endereco.logradouro" >
-                        <option [ngValue]="null"></option>
-                        <option [ngValue]="logradouroOption.id === endereco.logradouro?.id ? endereco.logradouro : logradouroOption" *ngFor="let logradouroOption of logradouros; trackBy: trackLogradouroById">{{logradouroOption.nome}}</option>
-                    </select>
-                </div>
                 <div class="form-group">
                     <label class="form-control-label" jhiTranslate="bestMealApp.endereco.municipio" for="field_municipio">Municipio</label>
                     <select class="form-control" id="field_municipio" name="municipio" [(ngModel)]="endereco.municipio" >
