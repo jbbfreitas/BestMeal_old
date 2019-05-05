@@ -1,0 +1,68 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <form name="editForm" role="form" novalidate (ngSubmit)="save()" #editForm="ngForm">
+            <h2 id="jhi-endereco-heading" jhiTranslate="bestMealApp.endereco.home.createOrEditLabel">Create or edit a Endereco</h2>
+            <div>
+                <jhi-alert-error></jhi-alert-error>
+                <div class="form-group" [hidden]="!endereco.id">
+                    <label for="id" jhiTranslate="global.field.id">ID</label>
+                    <input type="text" class="form-control" id="id" name="id"
+                        [(ngModel)]="endereco.id" readonly />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="bestMealApp.endereco.cep" for="field_cep">Cep</label>
+                    <input type="text" class="form-control" name="cep" id="field_cep"
+                        [(ngModel)]="endereco.cep" pattern="^[0-9]{2}.[0-9]{3}-[0-9]{3}$"/>
+                    <div [hidden]="!(editForm.controls.cep?.dirty && editForm.controls.cep?.invalid)">
+                        <small class="form-text text-danger"
+                            [hidden]="!editForm.controls.cep?.errors?.pattern" jhiTranslate="entity.validation.pattern" translateValues="{ pattern: 'Cep' }">
+                            This field should follow pattern for "Cep".
+                        </small>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="bestMealApp.endereco.complemento" for="field_complemento">Complemento</label>
+                    <input type="text" class="form-control" name="complemento" id="field_complemento"
+                        [(ngModel)]="endereco.complemento" required minlength="0" maxlength="30"/>
+                    <div [hidden]="!(editForm.controls.complemento?.dirty && editForm.controls.complemento?.invalid)">
+                        <small class="form-text text-danger"
+                        [hidden]="!editForm.controls.complemento?.errors?.required" jhiTranslate="entity.validation.required">
+                        This field is required.
+                        </small>
+                        <small class="form-text text-danger"
+                        [hidden]="!editForm.controls.complemento?.errors?.minlength" jhiTranslate="entity.validation.minlength" translateValues="{ min: 0 }">
+                        This field is required to be at least 0 characters.
+                        </small>
+                        <small class="form-text text-danger"
+                        [hidden]="!editForm.controls.complemento?.errors?.maxlength" jhiTranslate="entity.validation.maxlength" translateValues="{ max: 30 }">
+                        This field cannot be longer than 30 characters.
+                        </small>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="bestMealApp.endereco.logradouro" for="field_logradouro">Logradouro</label>
+                    <select class="form-control" id="field_logradouro" name="logradouro" [(ngModel)]="endereco.logradouro" >
+                        <option [ngValue]="null"></option>
+                        <option [ngValue]="logradouroOption.id === endereco.logradouro?.id ? endereco.logradouro : logradouroOption" *ngFor="let logradouroOption of logradouros; trackBy: trackLogradouroById">{{logradouroOption.nome}}</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="bestMealApp.endereco.municipio" for="field_municipio">Municipio</label>
+                    <select class="form-control" id="field_municipio" name="municipio" [(ngModel)]="endereco.municipio" >
+                        <option [ngValue]="null"></option>
+                        <option [ngValue]="municipioOption.id === endereco.municipio?.id ? endereco.municipio : municipioOption" *ngFor="let municipioOption of municipios; trackBy: trackMunicipioById">{{municipioOption.nome}}</option>
+                    </select>
+                </div>
+            </div>
+            <div>
+                <button type="button" id="cancel-save" class="btn btn-secondary"  (click)="previousState()">
+                    <fa-icon [icon]="'ban'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.cancel">Cancel</span>
+                </button>
+                <button type="submit" id="save-entity" [disabled]="editForm.form.invalid || isSaving" class="btn btn-primary">
+                    <fa-icon [icon]="'save'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.save">Save</span>
+                </button>
+            </div>
+        </form>
+    </div>
+</div>

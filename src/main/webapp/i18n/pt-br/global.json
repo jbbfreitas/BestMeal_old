@@ -14,6 +14,7 @@
                 "logradouro": "Logradouro",
                 "municipio": "Municipio",
                 "nome": "Nome",
+                "endereco": "Endereco",
                 "jhipster-needle-menu-add-entry": "JHipster will add additional entities here (do not translate!)"
             },
             "account": {

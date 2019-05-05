@@ -7,6 +7,7 @@ import { BestMealProdutoModule } from './produto/produto.module';
 import { BestMealLogradouroModule } from './logradouro/logradouro.module';
 import { BestMealMunicipioModule } from './municipio/municipio.module';
 import { BestMealNomeModule } from './nome/nome.module';
+import { BestMealEnderecoModule } from './endereco/endereco.module';
 /* jhipster-needle-add-entity-module-import - JHipster will add entity modules imports here */
 
 @NgModule({
@@ -19,6 +20,7 @@ import { BestMealNomeModule } from './nome/nome.module';
         BestMealLogradouroModule,
         BestMealMunicipioModule,
         BestMealNomeModule,
+        BestMealEnderecoModule,
         /* jhipster-needle-add-entity-module - JHipster will add entity modules here */
     ],
     declarations: [],
