@@ -9,6 +9,7 @@
                 "main": "Entidades",
                 "cartaoCredito": "Cartão de Crédito",
                 "cartaoRecompensa": "Cartao Recompensa",
+                "menu": "Menu",
                 "jhipster-needle-menu-add-entry": "JHipster will add additional entities here (do not translate!)"
             },
             "account": {

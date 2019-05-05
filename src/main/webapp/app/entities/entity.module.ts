@@ -2,6 +2,7 @@ import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 
 import { BestMealCartaoCreditoModule } from './cartao-credito/cartao-credito.module';
 import { BestMealCartaoRecompensaModule } from './cartao-recompensa/cartao-recompensa.module';
+import { BestMealMenuModule } from './menu/menu.module';
 /* jhipster-needle-add-entity-module-import - JHipster will add entity modules imports here */
 
 @NgModule({
@@ -9,6 +10,7 @@ import { BestMealCartaoRecompensaModule } from './cartao-recompensa/cartao-recom
     imports: [
         BestMealCartaoCreditoModule,
         BestMealCartaoRecompensaModule,
+        BestMealMenuModule,
         /* jhipster-needle-add-entity-module - JHipster will add entity modules here */
     ],
     declarations: [],

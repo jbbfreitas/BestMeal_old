@@ -1,0 +1,139 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <form name="editForm" role="form" novalidate (ngSubmit)="save()" #editForm="ngForm">
+            <h2 id="jhi-menu-heading" jhiTranslate="bestMealApp.menu.home.createOrEditLabel">Create or edit a Menu</h2>
+            <div>
+                <jhi-alert-error></jhi-alert-error>
+                <div class="form-group" [hidden]="!menu.id">
+                    <label for="id" jhiTranslate="global.field.id">ID</label>
+                    <input type="text" class="form-control" id="id" name="id"
+                        [(ngModel)]="menu.id" readonly />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="bestMealApp.menu.nome" for="field_nome">Nome</label>
+                    <input type="text" class="form-control" name="nome" id="field_nome"
+                        [(ngModel)]="menu.nome" required minlength="5" maxlength="50"/>
+                    <div [hidden]="!(editForm.controls.nome?.dirty && editForm.controls.nome?.invalid)">
+                        <small class="form-text text-danger"
+                        [hidden]="!editForm.controls.nome?.errors?.required" jhiTranslate="entity.validation.required">
+                        This field is required.
+                        </small>
+                        <small class="form-text text-danger"
+                        [hidden]="!editForm.controls.nome?.errors?.minlength" jhiTranslate="entity.validation.minlength" translateValues="{ min: 5 }">
+                        This field is required to be at least 5 characters.
+                        </small>
+                        <small class="form-text text-danger"
+                        [hidden]="!editForm.controls.nome?.errors?.maxlength" jhiTranslate="entity.validation.maxlength" translateValues="{ max: 50 }">
+                        This field cannot be longer than 50 characters.
+                        </small>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="bestMealApp.menu.grupo" for="field_grupo">Grupo</label>
+                    <select class="form-control" name="grupo" [(ngModel)]="menu.grupo" id="field_grupo" >
+                        <option value="ENTRADA">{{'bestMealApp.GrupoMenu.ENTRADA' | translate}}</option>
+                        <option value="PRATOFRIO">{{'bestMealApp.GrupoMenu.PRATOFRIO' | translate}}</option>
+                        <option value="PRATOQUENTE">{{'bestMealApp.GrupoMenu.PRATOQUENTE' | translate}}</option>
+                        <option value="SOBREMESA">{{'bestMealApp.GrupoMenu.SOBREMESA' | translate}}</option>
+                        <option value="VINHO">{{'bestMealApp.GrupoMenu.VINHO' | translate}}</option>
+                        <option value="CERVEJA">{{'bestMealApp.GrupoMenu.CERVEJA' | translate}}</option>
+                        <option value="DESTILADO">{{'bestMealApp.GrupoMenu.DESTILADO' | translate}}</option>
+                        <option value="REFRIGERANTE">{{'bestMealApp.GrupoMenu.REFRIGERANTE' | translate}}</option>
+                        <option value="SUCO">{{'bestMealApp.GrupoMenu.SUCO' | translate}}</option>
+                        <option value="COCKTAILSEMALCOOL">{{'bestMealApp.GrupoMenu.COCKTAILSEMALCOOL' | translate}}</option>
+                        <option value="COCKTAILCOMALCOOL">{{'bestMealApp.GrupoMenu.COCKTAILCOMALCOOL' | translate}}</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="bestMealApp.menu.valorNormal" for="field_valorNormal">Valor Normal</label>
+                    <input type="number" class="form-control" name="valorNormal" id="field_valorNormal"
+                        [(ngModel)]="menu.valorNormal" required min="0" jhiMin="0" max="20000" jhiMax="20000"/>
+                    <div [hidden]="!(editForm.controls.valorNormal?.dirty && editForm.controls.valorNormal?.invalid)">
+                        <small class="form-text text-danger"
+                        [hidden]="!editForm.controls.valorNormal?.errors?.required" jhiTranslate="entity.validation.required">
+                        This field is required.
+                        </small>
+                        <small class="form-text text-danger"
+                            [hidden]="!editForm.controls.valorNormal?.errors?.min" jhiTranslate="entity.validation.min" translateValues="{ min: 0 }">
+                            This field should be at least 0.
+                        </small>
+                        <small class="form-text text-danger"
+                            [hidden]="!editForm.controls.valorNormal?.errors?.max" jhiTranslate="entity.validation.max" translateValues="{ max: 20000 }">
+                            This field cannot be more than 20000.
+                        </small>
+                        <small class="form-text text-danger"
+                            [hidden]="!editForm.controls.valorNormal?.errors?.number" jhiTranslate="entity.validation.number">
+                            This field should be a number.
+                        </small>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="bestMealApp.menu.tempoPreparo" for="field_tempoPreparo">Tempo Preparo</label>
+                    <input type="number" class="form-control" name="tempoPreparo" id="field_tempoPreparo"
+                        [(ngModel)]="menu.tempoPreparo" required min="0" jhiMin="0" max="60" jhiMax="60"/>
+                    <div [hidden]="!(editForm.controls.tempoPreparo?.dirty && editForm.controls.tempoPreparo?.invalid)">
+                        <small class="form-text text-danger"
+                        [hidden]="!editForm.controls.tempoPreparo?.errors?.required" jhiTranslate="entity.validation.required">
+                        This field is required.
+                        </small>
+                        <small class="form-text text-danger"
+                            [hidden]="!editForm.controls.tempoPreparo?.errors?.min" jhiTranslate="entity.validation.min" translateValues="{ min: 0 }">
+                            This field should be at least 0.
+                        </small>
+                        <small class="form-text text-danger"
+                            [hidden]="!editForm.controls.tempoPreparo?.errors?.max" jhiTranslate="entity.validation.max" translateValues="{ max: 60 }">
+                            This field cannot be more than 60.
+                        </small>
+                        <small class="form-text text-danger"
+                            [hidden]="!editForm.controls.tempoPreparo?.errors?.number" jhiTranslate="entity.validation.number">
+                            This field should be a number.
+                        </small>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="bestMealApp.menu.isDisponivel" for="field_isDisponivel">Is Disponivel</label>
+                    <input type="checkbox" class="form-control" name="isDisponivel" id="field_isDisponivel"
+                        [(ngModel)]="menu.isDisponivel" />
+                    <div [hidden]="!(editForm.controls.isDisponivel?.dirty && editForm.controls.isDisponivel?.invalid)">
+                        <small class="form-text text-danger"
+                        [hidden]="!editForm.controls.isDisponivel?.errors?.required" jhiTranslate="entity.validation.required">
+                        This field is required.
+                        </small>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="bestMealApp.menu.valorReduzido" for="field_valorReduzido">Valor Reduzido</label>
+                    <input type="number" class="form-control" name="valorReduzido" id="field_valorReduzido"
+                        [(ngModel)]="menu.valorReduzido" required min="0" jhiMin="0" max="2000" jhiMax="2000"/>
+                    <div [hidden]="!(editForm.controls.valorReduzido?.dirty && editForm.controls.valorReduzido?.invalid)">
+                        <small class="form-text text-danger"
+                        [hidden]="!editForm.controls.valorReduzido?.errors?.required" jhiTranslate="entity.validation.required">
+                        This field is required.
+                        </small>
+                        <small class="form-text text-danger"
+                            [hidden]="!editForm.controls.valorReduzido?.errors?.min" jhiTranslate="entity.validation.min" translateValues="{ min: 0 }">
+                            This field should be at least 0.
+                        </small>
+                        <small class="form-text text-danger"
+                            [hidden]="!editForm.controls.valorReduzido?.errors?.max" jhiTranslate="entity.validation.max" translateValues="{ max: 2000 }">
+                            This field cannot be more than 2000.
+                        </small>
+                        <small class="form-text text-danger"
+                            [hidden]="!editForm.controls.valorReduzido?.errors?.number" jhiTranslate="entity.validation.number">
+                            This field should be a number.
+                        </small>
+                    </div>
+                </div>
+
+            </div>
+            <div>
+                <button type="button" id="cancel-save" class="btn btn-secondary"  (click)="previousState()">
+                    <fa-icon [icon]="'ban'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.cancel">Cancel</span>
+                </button>
+                <button type="submit" id="save-entity" [disabled]="editForm.form.invalid || isSaving" class="btn btn-primary">
+                    <fa-icon [icon]="'save'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.save">Save</span>
+                </button>
+            </div>
+        </form>
+    </div>
+</div>
