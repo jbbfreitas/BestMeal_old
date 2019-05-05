@@ -1,0 +1,26 @@
+
+{
+    "bestMealApp": {
+        "nome" : {
+            "home": {
+                "title": "Nomes",
+                "createLabel": "Criar novo Nome",
+                "createOrEditLabel": "Criar ou editar Nome"
+            },
+            "created": "Um novo Nome foi criado com o identificador {{ param }}",
+            "updated": "Um Nome foi atualizado com o identificador {{ param }}",
+            "deleted": "Um Nome foi deletado com o identificador {{ param }}",
+            "delete": {
+                "question": "Tem certeza de que deseja excluir Nome {{ id }}?"
+            },
+            "detail": {
+                "title": "Nome"
+            },
+            "primeiroNome": "Primeiro Nome",
+            "nomeMeio": "Nome Meio",
+            "sobreNome": "Sobre Nome",
+            "saudacao": "Saudacao",
+            "titulo": "Titulo"
+        }
+    }
+}

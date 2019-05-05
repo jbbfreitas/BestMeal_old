@@ -42,6 +42,9 @@ public class CacheConfiguration {
             cm.createCache(br.com.abim.bestmeal.domain.CartaoRecompensa.class.getName(), jcacheConfiguration);
             cm.createCache(br.com.abim.bestmeal.domain.Menu.class.getName(), jcacheConfiguration);
             cm.createCache(br.com.abim.bestmeal.domain.Produto.class.getName(), jcacheConfiguration);
+            cm.createCache(br.com.abim.bestmeal.domain.Logradouro.class.getName(), jcacheConfiguration);
+            cm.createCache(br.com.abim.bestmeal.domain.Municipio.class.getName(), jcacheConfiguration);
+            cm.createCache(br.com.abim.bestmeal.domain.Nome.class.getName(), jcacheConfiguration);
             // jhipster-needle-ehcache-add-entry
         };
     }

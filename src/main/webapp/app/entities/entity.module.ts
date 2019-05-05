@@ -4,6 +4,9 @@ import { BestMealCartaoCreditoModule } from './cartao-credito/cartao-credito.mod
 import { BestMealCartaoRecompensaModule } from './cartao-recompensa/cartao-recompensa.module';
 import { BestMealMenuModule } from './menu/menu.module';
 import { BestMealProdutoModule } from './produto/produto.module';
+import { BestMealLogradouroModule } from './logradouro/logradouro.module';
+import { BestMealMunicipioModule } from './municipio/municipio.module';
+import { BestMealNomeModule } from './nome/nome.module';
 /* jhipster-needle-add-entity-module-import - JHipster will add entity modules imports here */
 
 @NgModule({
@@ -13,6 +16,9 @@ import { BestMealProdutoModule } from './produto/produto.module';
         BestMealCartaoRecompensaModule,
         BestMealMenuModule,
         BestMealProdutoModule,
+        BestMealLogradouroModule,
+        BestMealMunicipioModule,
+        BestMealNomeModule,
         /* jhipster-needle-add-entity-module - JHipster will add entity modules here */
     ],
     declarations: [],

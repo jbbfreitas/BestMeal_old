@@ -1,0 +1,23 @@
+
+{
+    "bestMealApp": {
+        "logradouro" : {
+            "home": {
+                "title": "Logradouros",
+                "createLabel": "Criar novo Logradouro",
+                "createOrEditLabel": "Criar ou editar Logradouro"
+            },
+            "created": "Um novo Logradouro foi criado com o identificador {{ param }}",
+            "updated": "Um Logradouro foi atualizado com o identificador {{ param }}",
+            "deleted": "Um Logradouro foi deletado com o identificador {{ param }}",
+            "delete": {
+                "question": "Tem certeza de que deseja excluir Logradouro {{ id }}?"
+            },
+            "detail": {
+                "title": "Logradouro"
+            },
+            "tipo": "Tipo",
+            "nome": "Nome"
+        }
+    }
+}

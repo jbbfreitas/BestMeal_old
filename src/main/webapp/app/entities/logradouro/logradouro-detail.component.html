@@ -1,0 +1,31 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="logradouro">
+            <h2><span jhiTranslate="bestMealApp.logradouro.detail.title">Logradouro</span> {{logradouro.id}}</h2>
+            <hr>
+            <jhi-alert-error></jhi-alert-error>
+            <dl class="row-md jh-entity-details">
+                <dt><span jhiTranslate="bestMealApp.logradouro.tipo">Tipo</span></dt>
+                <dd>
+                    <span jhiTranslate="{{'bestMealApp.TipoLogradouro.' + logradouro.tipo}}">{{logradouro.tipo}}</span>
+                </dd>
+                <dt><span jhiTranslate="bestMealApp.logradouro.nome">Nome</span></dt>
+                <dd>
+                    <span>{{logradouro.nome}}</span>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon [icon]="'arrow-left'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back"> Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/logradouro', logradouro.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon [icon]="'pencil-alt'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit"> Edit</span>
+            </button>
+        </div>
+    </div>
+</div>
