@@ -15,7 +15,6 @@
                 "municipio": "Municipio",
                 "nome": "Nome",
                 "endereco": "Endereco",
-                "cartaoCredito": "Cartao Credito",
                 "jhipster-needle-menu-add-entry": "JHipster will add additional entities here (do not translate!)"
             },
             "account": {

@@ -3,8 +3,8 @@
     "bestMealApp": {
         "cartaoCredito" : {
             "home": {
-                "title": "Cartao Creditos",
-                "createLabel": "Criar novo Cartao Credito",
+                "title": "Cartão de Crédito",
+                "createLabel": "Novo",
                 "createOrEditLabel": "Criar ou editar Cartao Credito"
             },
             "created": "Um novo Cartao Credito foi criado com o identificador {{ param }}",
@@ -14,11 +14,11 @@
                 "question": "Tem certeza de que deseja excluir Cartao Credito {{ id }}?"
             },
             "detail": {
-                "title": "Cartao Credito"
+                "title": "Cartão de Crédito"
             },
             "bandeira": "Bandeira",
             "numero": "Numero",
-            "cvv": "Cvv",
+            "cv": "Cv",
             "validade": "Validade"
         }
     }

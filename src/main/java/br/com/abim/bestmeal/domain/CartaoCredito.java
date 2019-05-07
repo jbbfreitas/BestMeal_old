@@ -33,12 +33,12 @@ public class CartaoCredito implements Serializable {
     @Column(name = "numero")
     private String numero;
 
-    @Pattern(regexp = "^[0-9]{3}$")
-    @Column(name = "cvv")
-    private String cvv;
+    @Column(name = "cv")
+    private String cv;
 
-    @Pattern(regexp = "^[0-9]{2}/[0-9]{4}$")
-    @Column(name = "validade")
+    @NotNull
+    @Size(min = 4, max = 4)
+    @Column(name = "validade", length = 4, nullable = false)
     private String validade;
 
     // jhipster-needle-entity-add-field - JHipster will add fields here, do not remove
@@ -76,17 +76,17 @@ public class CartaoCredito implements Serializable {
         this.numero = numero;
     }
 
-    public String getCvv() {
-        return cvv;
+    public String getCv() {
+        return cv;
     }
 
-    public CartaoCredito cvv(String cvv) {
-        this.cvv = cvv;
+    public CartaoCredito cv(String cv) {
+        this.cv = cv;
         return this;
     }
 
-    public void setCvv(String cvv) {
-        this.cvv = cvv;
+    public void setCv(String cv) {
+        this.cv = cv;
     }
 
     public String getValidade() {
@@ -129,7 +129,7 @@ public class CartaoCredito implements Serializable {
             "id=" + getId() +
             ", bandeira='" + getBandeira() + "'" +
             ", numero='" + getNumero() + "'" +
-            ", cvv='" + getCvv() + "'" +
+            ", cv='" + getCv() + "'" +
             ", validade='" + getValidade() + "'" +
             "}";
     }
