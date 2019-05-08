@@ -13,7 +13,7 @@
             "fieldType": "String"
         },
         {
-            "fieldName": "cv",
+            "fieldName": "cvv",
             "fieldType": "String"
         },
         {
@@ -28,7 +28,7 @@
             "fieldValidateRulesMaxlength": "4"
         }
     ],
-    "changelogDate": "20190501153801",
+    "changelogDate": "20190506153801",
     "dto": "no",
     "searchEngine": false,
     "service": "serviceImpl",

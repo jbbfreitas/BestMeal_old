@@ -1,0 +1,47 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="pessoa">
+            <h2><span jhiTranslate="bestMealApp.pessoa.detail.title">Pessoa</span> {{pessoa.id}}</h2>
+            <hr>
+            <jhi-alert-error></jhi-alert-error>
+            <dl class="row-md jh-entity-details">
+                <dt><span jhiTranslate="bestMealApp.pessoa.tipo">Tipo</span></dt>
+                <dd>
+                    <span jhiTranslate="{{'bestMealApp.TipoPessoa.' + pessoa.tipo}}">{{pessoa.tipo}}</span>
+                </dd>
+                <dt><span jhiTranslate="bestMealApp.pessoa.cpf">Cpf</span></dt>
+                <dd>
+                    <span>{{pessoa.cpf}}</span>
+                </dd>
+                <dt><span jhiTranslate="bestMealApp.pessoa.cnpj">Cnpj</span></dt>
+                <dd>
+                    <span>{{pessoa.cnpj}}</span>
+                </dd>
+                <dt><span jhiTranslate="bestMealApp.pessoa.nome">Nome</span></dt>
+                <dd>
+                    <div *ngIf="pessoa.nome">
+                        <a [routerLink]="['/nome', pessoa.nome?.id, 'view']">{{pessoa.nome?.primeiroNome}}</a>
+                    </div>
+                </dd>
+                <dt><span jhiTranslate="bestMealApp.pessoa.endereco">Endereco</span></dt>
+                <dd>
+                    <div *ngIf="pessoa.endereco">
+                        <a [routerLink]="['/endereco', pessoa.endereco?.id, 'view']">{{pessoa.endereco?.id}}</a>
+                    </div>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon [icon]="'arrow-left'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back"> Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/pessoa', pessoa.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon [icon]="'pencil-alt'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit"> Edit</span>
+            </button>
+        </div>
+    </div>
+</div>

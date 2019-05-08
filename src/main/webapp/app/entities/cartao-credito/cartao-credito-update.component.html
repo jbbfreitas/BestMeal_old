@@ -24,11 +24,28 @@
                     <input type="text" class="form-control" name="numero" id="field_numero"
                         [(ngModel)]="cartaoCredito.numero" />
                 </div>
+
+
+
+
                 <div class="form-group">
-                    <label class="form-control-label" jhiTranslate="bestMealApp.cartaoCredito.cv" for="field_cv">Cv</label>
-                    <input type="text" class="form-control" name="cv" id="field_cv"
-                        [(ngModel)]="cartaoCredito.cv" />
+                    <label class="form-control-label" jhiTranslate="bestMealApp.cartaoCredito.cvv" for="field_cvv">CVV</label>
+                    <input type="text" jhiCvvValidator  class="form-control" name="cvv" id="field_cvv"
+                        [(ngModel)]="cartaoCredito.cvv" >
+                        <div [hidden]="!(editForm.controls.cvv?.dirty && editForm.controls.cvv?.invalid)">
+                                <small class="form-text text-danger"
+                                [hidden]="!editForm.controls.cvv?.errors?.jhiCvvValidator" jhiTranslate="entity.validation.required">
+                                This field is required.
+                                </small>
+                        </div>
                 </div>
+
+
+    
+
+
+
+
                 <div class="form-group">
                     <label class="form-control-label" jhiTranslate="bestMealApp.cartaoCredito.validade" for="field_validade">Validade</label>
                     <input type="text" class="form-control" name="validade" id="field_validade"

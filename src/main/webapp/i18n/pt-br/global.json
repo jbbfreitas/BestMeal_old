@@ -14,7 +14,9 @@
                 "logradouro": "Logradouro",
                 "municipio": "Municipio",
                 "nome": "Nome",
-                "endereco": "Endereco",
+                "endereco": "Endereço",
+                "cartaoCredito": "Cartão Crédito",
+                "pessoa": "Pessoa",
                 "jhipster-needle-menu-add-entry": "JHipster will add additional entities here (do not translate!)"
             },
             "account": {
