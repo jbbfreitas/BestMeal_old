@@ -30,11 +30,11 @@
 
                 <div class="form-group">
                     <label class="form-control-label" jhiTranslate="bestMealApp.cartaoCredito.cvv" for="field_cvv">CVV</label>
-                    <input type="text" jhiCvvValidator  class="form-control" name="cvv" id="field_cvv"
-                        [(ngModel)]="cartaoCredito.cvv" >
+                    <input type="text"   class="form-control" name="cvv" id="field_cvv"
+                        [(ngModel)]="cartaoCredito.cvv" emailvalidator/>
                         <div [hidden]="!(editForm.controls.cvv?.dirty && editForm.controls.cvv?.invalid)">
                                 <small class="form-text text-danger"
-                                [hidden]="!editForm.controls.cvv?.errors?.jhiCvvValidator" jhiTranslate="entity.validation.required">
+                                [hidden]="!editForm.controls.cvv?.errors?.emailvalidator" jhiTranslate="entity.validation.required">
                                 This field is required.
                                 </small>
                         </div>

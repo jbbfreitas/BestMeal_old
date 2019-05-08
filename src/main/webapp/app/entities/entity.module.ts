@@ -8,8 +8,6 @@ import { BestMealLogradouroModule } from './logradouro/logradouro.module';
 import { BestMealMunicipioModule } from './municipio/municipio.module';
 import { BestMealNomeModule } from './nome/nome.module';
 import { BestMealEnderecoModule } from './endereco/endereco.module';
-import { CvvValidatorDirective } from '../shared/validators/cvv-validator.directive';
-
 import { BestMealPessoaModule } from './pessoa/pessoa.module';
 /* jhipster-needle-add-entity-module-import - JHipster will add entity modules imports here */
 
@@ -27,7 +25,7 @@ import { BestMealPessoaModule } from './pessoa/pessoa.module';
         BestMealPessoaModule,
         /* jhipster-needle-add-entity-module - JHipster will add entity modules here */
     ],
-    declarations: [CvvValidatorDirective],
+    declarations: [],
     entryComponents: [],
     providers: [],
     schemas: [CUSTOM_ELEMENTS_SCHEMA]

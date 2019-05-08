@@ -18,6 +18,8 @@ import { BestMealHomeModule } from './home/home.module';
 import { BestMealAccountModule } from './account/account.module';
 import { BestMealEntityModule } from './entities/entity.module';
 import * as moment from 'moment';
+import { CvvValidatorDirective } from './shared/validators/cvv-validator.directive';
+
 // jhipster-needle-angular-add-module-import JHipster will add new module here
 import { JhiMainComponent, NavbarComponent, FooterComponent, PageRibbonComponent, ActiveMenuDirective, ErrorComponent } from './layouts';
 
@@ -33,7 +35,15 @@ import { JhiMainComponent, NavbarComponent, FooterComponent, PageRibbonComponent
         // jhipster-needle-angular-add-module JHipster will add new module here
         BestMealEntityModule
     ],
-    declarations: [JhiMainComponent, NavbarComponent, ErrorComponent, PageRibbonComponent, ActiveMenuDirective, FooterComponent],
+    declarations: [
+        CvvValidatorDirective,
+        JhiMainComponent,
+        NavbarComponent,
+        ErrorComponent,
+        PageRibbonComponent,
+        ActiveMenuDirective,
+        FooterComponent
+    ],
     providers: [
         {
             provide: HTTP_INTERCEPTORS,
